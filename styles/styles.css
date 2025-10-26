@@ -1,0 +1,507 @@
+/* =================================
+   RESET AND BASE CONFIGURATION
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* =================================
+   BOOTSTRAP CUSTOM STYLES
+================================= */
+
+/* Blog Cards Hover Effect */
+.hover-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Filter Buttons Animations */
+.filter-tag {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Blog Hero Icons */
+.blog-hero .fas {
+  opacity: 0.8;
+}
+
+
+
+/* Stretched Link Override for Icons */
+.stretched-link .text-primary {
+  position: relative;
+  z-index: 2;
+}
+
+/* Custom Badge Spacing */
+.badge + .badge {
+  margin-left: 0.25rem;
+}
+
+/* No Results Animation */
+#noResults .fas {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+/* =================================
+   CURRICULUM/RESUME STYLES
+================================= */
+
+/* Timeline for experience */
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--bs-primary);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--bs-primary-rgb, 13, 110, 253);
+  z-index: 1;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 32px;
+  width: 2px;
+  height: calc(100% - 12px);
+  background: linear-gradient(to bottom, var(--bs-primary), transparent);
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* Progress bars animation */
+.progress-bar {
+  animation: progressAnimation 2s ease-in-out;
+}
+
+@keyframes progressAnimation {
+  0% { width: 0% !important; }
+  100% { width: var(--progress-width); }
+}
+
+/* Hover effects for CV cards */
+.cv-section .card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cv-section .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Contact info click animations */
+.cv-header .contact-info a {
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.375rem;
+  padding: 0.2rem 0.4rem;
+  margin: -0.2rem -0.4rem;
+  position: relative;
+  display: inline-block;
+}
+
+.cv-header .contact-info a:hover {
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-primary) !important;
+  text-decoration: none !important;
+  transform: scale(1.02);
+}
+
+.cv-header .contact-info a:active {
+  background-color: var(--bs-primary);
+  color: white !important;
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Click ripple effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.cv-header .contact-info a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, 0.3);
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.cv-header .contact-info a:active::before {
+  width: 20px;
+  height: 20px;
+  animation: ripple 0.6s ease-out;
+}
+
+/* Skills section enhancements */
+.skill-item .progress {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-item .progress-bar {
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Download button hover effect */
+.cv-footer .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.25);
+}
+
+/* =================================
+   BLOG POST CONTENT STYLES
+================================= */
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.post-content > * + * {
+  margin-top: 1.5rem;
+}
+
+.post-content h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+.post-content ul, 
+.post-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content li > p {
+  margin-bottom: 0.5rem;
+}
+
+.post-content a {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.post-content a:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.post-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.post-content em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.post-content code {
+  background-color: #f3f4f6;
+  color: #dc2626;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+}
+
+.post-content pre {
+  background-color: #f6f8fa !important;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  border: 1px solid #d1d9e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-content pre code {
+  background: none !important;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  white-space: pre;
+}
+
+/* Enhance code block appearance */
+.post-content pre {
+  position: relative;
+}
+
+/* Add language label for code blocks */
+.post-content pre[class*="language-"]::before {
+  content: attr(class);
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  color: #656d76;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #2563eb;
+  background-color: #f8fafc;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.post-content blockquote > * {
+  margin: 0;
+}
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+.post-content table th,
+.post-content table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.post-content table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.post-content table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.post-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2.5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-item::before,
+  .timeline-item::after {
+    display: none;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .post-content h4 {
+    font-size: 1.125rem;
+  }
+
+  .post-content pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .post-content table {
+    font-size: 0.875rem;
+  }
+}
+
+/* Text utilities that complement Bootstrap */
+.post-content .text-center {
+  text-align: center;
+}
+
+.post-content .text-large {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* =================================
+   CODE SYNTAX HIGHLIGHTING ENHANCEMENTS
+================================= */
+
+/* Override Highlight.js theme customizations */
+.hljs {
+  background: #f6f8fa !important;
+  color: #24292f !important;
+}
+
+/* Responsive code blocks */
+@media (max-width: 768px) {
+  .post-content pre {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .post-content pre code {
+    font-size: 0.8rem;
+  }
+}
+
+/* Copy button for code blocks (optional enhancement) */
+.post-content pre {
+  position: relative;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.05);
+  color: #656d76;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.post-content pre:hover .copy-code-btn {
+  opacity: 1;
+}
+
+.copy-code-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #24292f;
+}
+
+/* =================================
+   MOBILE NAVIGATION ENHANCEMENTS
+================================= */
+
+/* Current page indicator for mobile */
+.navbar-text.d-lg-none {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Ensure proper spacing on mobile navbar */
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    flex-grow: 1;
+  }
+  
+  .navbar-text.d-lg-none {
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+}

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+Keep your requirements close to the code - My Portfolio        </title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="/styles/styles.css?v=1761497151506">
+        <meta name="description" content="Personal web development portfolio">
+
+    <meta name="description" content="An exploration of domain-driven design principles in Java, demonstrating how value objects can encapsulate business requirements directly within the code struct...">
+    <meta name="keywords" content="java, ddd, domain-driven-design, value-objects, clean-code, software-architecture">
+    <meta name="author" content="Mario">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mariocalin.github.io/blog/keep-requirements-close-to-code/">
+    <meta property="og:title" content="Keep your requirements close to the code">
+    <meta property="og:description" content="An exploration of domain-driven design principles in Java, demonstrating how value objects can encapsulate business requirements directly within the code struct...">
+    <meta property="article:published_time" content="2025-10-19">
+    <meta property="article:author" content="Mario">
+        <meta property="article:tag" content="java">
+        <meta property="article:tag" content="ddd">
+        <meta property="article:tag" content="domain-driven-design">
+        <meta property="article:tag" content="value-objects">
+        <meta property="article:tag" content="clean-code">
+        <meta property="article:tag" content="software-architecture">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://mariocalin.github.io/blog/keep-requirements-close-to-code/">
+    <meta property="twitter:title" content="Keep your requirements close to the code">
+    <meta property="twitter:description" content="An exploration of domain-driven design principles in Java, demonstrating how value objects can encapsulate business requirements directly within the code struct...">
+
+    <!-- Highlight.js CSS for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-lg">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="/">My Portfolio</a>
+
+                <!-- Current page indicator for mobile -->
+                <span class="navbar-text d-lg-none text-white-50 me-3 small">
+                        <i class="fas fa-blog me-1"></i>Blog
+                </span>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium " href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium active" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium " href="/curriculum">Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <main class="blog-post">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="breadcrumb" class="py-3 bg-light">
+            <div class="container">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="text-decoration-none">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/blog/" class="text-decoration-none">Blog</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Keep your requirements close t...</li>
+                </ol>
+            </div>
+        </nav>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <header class="mb-5">
+                        <h1 class="display-5 fw-bold text-dark mb-4">Keep your requirements close to the code</h1>
+
+                            <p class="lead text-muted mb-4">An exploration of domain-driven design principles in Java, demonstrating how value objects can encapsulate business requirements directly within the code structure, enhancing maintainability and reducing cognitive complexity.</p>
+
+                        <div class="d-flex flex-wrap align-items-center gap-3 text-muted mb-4">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-calendar-alt me-2"></i>
+                                <time datetime="2025-10-19">October 19, 2025</time>
+                            </span>
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-clock me-2"></i>
+                                12 min read
+                        </span>
+                        </div>
+
+                            <div class="mb-4">
+                                    <span class="badge bg-primary me-2 mb-1">java</span>
+                                    <span class="badge bg-primary me-2 mb-1">ddd</span>
+                                    <span class="badge bg-primary me-2 mb-1">domain-driven-design</span>
+                                    <span class="badge bg-primary me-2 mb-1">value-objects</span>
+                                    <span class="badge bg-primary me-2 mb-1">clean-code</span>
+                                    <span class="badge bg-primary me-2 mb-1">software-architecture</span>
+                            </div>
+                    </header>
+
+                    <article class="post-content mb-5">
+                        <h2>Introduction</h2>
+<p>In modern software development, the alignment between business requirements and code implementation remains a critical challenge. This article examines the application of domain-driven design principles in Java, specifically focusing on how value objects can be employed to maintain business requirements in close proximity to their implementation.</p>
+<h2>Problem Statement</h2>
+<p>Consider a scenario where a software development team is tasked with implementing a library management system. The business domain contains well-established concepts such as ISBN numbers, book titles, and author names, each with specific validation rules and constraints. However, traditional object-oriented approaches often fail to capture these domain-specific requirements directly within the code structure.</p>
+<p>The conventional approach involves creating a simple data structure to represent a book entity:</p>
+<pre><code class="language-java">public record Book(String ISBN, String name, String description, String authorName, String bookCover) { }
+
+class BookTest {
+
+    @Test
+    void createBook() {
+        Book elQuixote = new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(elQuixote);
+    }
+}
+</code></pre>
+<p>While this implementation appears straightforward, it presents several critical issues. The primary concern is the lack of data validation, allowing the creation of invalid book instances through the constructor with null or malformed parameters. This represents a fundamental flaw in the design that can lead to runtime errors and data integrity issues.</p>
+<p>To address the null parameter vulnerability, a preliminary solution involves implementing null checks within the record constructor:</p>
+<pre><code class="language-java">import java.util.Objects;
+
+public record Book(String ISBN, String name, String description, String authorName, String bookCover) {
+    public Book {
+        Objects.requireNonNull(ISBN);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(description);
+        Objects.requireNonNull(authorName);
+        Objects.requireNonNull(bookCover);
+    }
+}
+
+class BookTest {
+
+    @Test
+    void createBook() {
+        final Book elQuixote = new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(elQuixote);
+    }
+
+    @Test
+    void cannotCreateBookWithNullParameters() {
+        assertThrows(NullPointerException.class, () -&gt; new Book(null, null, null, null, null));
+    }
+}
+</code></pre>
+<p>The implementation of null validation provides a basic level of protection against invalid constructor arguments. However, this approach addresses only a subset of potential validation issues. The system remains vulnerable to semantically incorrect but non-null parameters:</p>
+<pre><code class="language-java">import java.util.Objects;
+
+public record Book(String ISBN, String name, String description, String authorName, String bookCover) {
+    public Book {
+        Objects.requireNonNull(ISBN);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(description);
+        Objects.requireNonNull(authorName);
+        Objects.requireNonNull(bookCover);
+    }
+}
+
+class BookTest {
+
+    @Test
+    void createBook() {
+        final Book elQuixote = new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(elQuixote);
+
+        // WATCH OUT
+        final Book otherQuixoteBook = new Book(&quot;coolISBN&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(otherQuixoteBook);
+    }
+
+    @Test
+    void cannotCreateBookWithNullParameters() {
+        assertThrows(NullPointerException.class, () -&gt; new Book(null, null, null, null, null));
+    }
+}
+</code></pre>
+<p>The example demonstrates a critical flaw: while the string &quot;coolISBN&quot; is not null, it does not constitute a valid ISBN according to international standards. This highlights the necessity for domain-specific validation beyond simple null checks.</p>
+<h2>Domain Requirements Analysis</h2>
+<p>The International Standard Book Number (ISBN) system defines specific formatting and validation rules that must be enforced at the application level. According to the business requirements:</p>
+<pre><code>An ISBN consists of 13 digits (until December 2006 it had 10 digits), the first 3 digits are an EAN prefix and it is always 978 or 979.
+979, then there are 2 digits identifying the country (in the case of Spain 84), then we have 3 digits identifying the publisher (or the self-publisher), the next 3 digits identify the
+publisher (or the self-publisher), the next 3 digits identify the book, and the last digit (the letter X can also appear, which is equivalent to 10) serves as a control
+10) serves as a check to confirm that the string is correct.
+</code></pre>
+<p>To implement proper ISBN validation, a regular expression pattern matching approach is required. The following implementation incorporates domain-specific validation rules:</p>
+<pre><code class="language-java">import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Objects;
+import java.util.regex.Pattern;
+
+public record Book(String ISBN, String name, String description, String authorName, String bookCover) {
+    private static final String ISBN_PATTERN = &quot;^(ISBN(-13)?:\\s?)?(\\d{3}-?\\d{1,5}-?\\d{1,7}-?\\d{1,7}-?\\d{1,7}|\\d{10}|\\d{13})$&quot;;
+
+    public Book {
+        Objects.requireNonNull(ISBN);
+        if (!isValidISBN(ISBN)) {
+            throw new IllegalArgumentException(&quot;ISBN is not valid&quot;);
+        }
+
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(description);
+        Objects.requireNonNull(authorName);
+        Objects.requireNonNull(bookCover);
+    }
+
+
+    private static boolean isValidISBN(String isbn) {
+        return Pattern.matches(ISBN_PATTERN, isbn);
+    }
+}
+
+class BookTest {
+
+    @Test
+    void createBook() {
+        final Book elQuixote = new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(elQuixote);
+    }
+
+    @Test
+    void cannotCreateBookWithNullParameters() {
+        assertThrows(NullPointerException.class, () -&gt; new Book(null, null, null, null, null));
+    }
+
+    @Test
+    void cannotCreateBookWithWrongISBN() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(&quot;coolISBN&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+    }
+}
+</code></pre>
+<p>While ISBN validation addresses one aspect of the domain requirements, additional fields require similar attention. Each string-based field possesses distinct validation rules that must be enforced to maintain data integrity. The business requirements specify the following constraints:</p>
+<pre><code>- The name of the book must not be empty and must have a maximum length of 80 characters.
+- The book description must not be empty and must have a maximum length of 200 characters.
+- The author&#39;s name must not be empty.
+- The book cover is a URL of an image.
+</code></pre>
+<p>A straightforward approach involves incorporating all validation logic within the record constructor. This centralizes validation concerns but leads to increased complexity:</p>
+<pre><code class="language-java">import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Objects;
+import java.util.regex.Pattern;
+
+public record Book(String ISBN, String name, String description, String authorName, String bookCover) {
+    private static final String ISBN_PATTERN = &quot;^(ISBN(-13)?:\\s?)?(\\d{3}-?\\d{1,5}-?\\d{1,7}-?\\d{1,7}-?\\d{1,7}|\\d{10}|\\d{13})$&quot;;
+    private static final Pattern IMAGE_EXTENSION_PATTERN = Pattern.compile(&quot;\\.(jpg|png)$&quot;, Pattern.CASE_INSENSITIVE);
+
+    public Book {
+        Objects.requireNonNull(ISBN);
+        if (!isValidISBN(ISBN)) {
+            throw new IllegalArgumentException(&quot;ISBN is not valid&quot;);
+        }
+
+        Objects.requireNonNull(name);
+        if (!nameIsValid(name)) {
+            throw new IllegalArgumentException(&quot;name is not valid&quot;);
+        }
+
+        Objects.requireNonNull(description);
+        if (!descriptionIsValid(description)) {
+            throw new IllegalArgumentException(&quot;description is not valid&quot;);
+        }
+
+        Objects.requireNonNull(authorName);
+        if (!authorNameIsValid(authorName)) {
+            throw new IllegalArgumentException(&quot;authorName is not valid&quot;);
+        }
+
+        Objects.requireNonNull(bookCover);
+        if (!bookCoverIsValid(bookCover)) {
+            throw new IllegalArgumentException(&quot;bookCover is not valid&quot;);
+        }
+    }
+
+    private static boolean isValidISBN(String isbn) {
+        return Pattern.matches(ISBN_PATTERN, isbn);
+    }
+
+    private static boolean nameIsValid(String name) {
+        return name.length() &gt; 0 &amp;&amp; name.length() &lt;= 80 &amp;&amp; !name.trim().equals(&quot;&quot;);
+    }
+
+    private static boolean descriptionIsValid(String description) {
+        return description.length() &gt; 0 &amp;&amp; description.length() &lt;= 200 &amp;&amp; !description.trim().equals(&quot;&quot;);
+    }
+
+    private static boolean authorNameIsValid(String authorName) {
+        return authorName.length() &gt; 0 &amp;&amp; !authorName.trim().equals(&quot;&quot;);
+    }
+
+    private static boolean bookCoverIsValid(String imageUrl) {
+        try {
+            URL url = new URL(imageUrl);
+            String path = url.getPath();
+            return IMAGE_EXTENSION_PATTERN.matcher(path).find();
+        } catch (MalformedURLException e) {
+            return false;
+        }
+    }
+
+}
+
+class BookTest {
+
+    @Test
+    void createBook() {
+        final Book elQuixote = new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(elQuixote);
+    }
+
+    @Test
+    void cannotCreateBookWithNullParameters() {
+        assertThrows(NullPointerException.class, () -&gt; new Book(null, null, null, null, null));
+    }
+
+    @Test
+    void cannotCreateBookWithWrongISBN() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(&quot;coolISBN&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+    }
+
+    @Test
+    void cannotCreateBookWithWrongName() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(&quot;978-84-08-06105-2&quot;, &quot;&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+    }
+
+    @Test
+    void cannotCreateBookWithWrongDescription() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+    }
+
+    @Test
+    void cannotCreateBookWithWrongAuthorName() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+    }
+
+    @Test
+    void cannotCreateBookWithWrongBookCover() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(&quot;978-84-08-06105-2&quot;, &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;picture&quot;));
+    }
+}
+</code></pre>
+<p>While this implementation ensures data validation, it introduces several architectural concerns. The extensive use of generic String types throughout the system creates a lack of semantic meaning and type safety. When business logic interacts with these fields, developers must work with primitive strings rather than domain-specific types, as demonstrated in the following service class:</p>
+<pre><code class="language-java">class MyFantasticBookService {
+
+    private final List&lt;Book&gt; collectionOfBooks = populateCollectionOfBooksFromPersistence();
+
+    // Remember, 84 is the country code for Spain
+    public List&lt;Book&gt; getAllBooksWithCountryCodeFromSpain() {
+        return collectionOfBooks.stream().filter(book -&gt; {
+            final String countryCode = book.isbn().replaceAll(&quot;-&quot;, &quot;&quot;).replace(&quot;ISBN-13:&quot;, &quot;&quot;).replace(&quot;ISBN:&quot;, &quot;&quot;).trim().substring(3, 5);
+            return countryCode.equals(&quot;84&quot;);
+        }).toList();
+    }
+}
+</code></pre>
+<p>This implementation demonstrates the cognitive burden imposed by primitive string manipulation. The extraction logic is complex, error-prone, and divorced from the domain concept it represents. While refactoring could relocate this logic to utility methods or separate classes, such approaches fundamentally separate domain concepts from their inherent business rules and characteristics. The use of generic String types eliminates semantic context, creating maintenance challenges and reducing code expressiveness.</p>
+<h2>Value Objects as Domain Abstractions</h2>
+<p>Value objects provide an architectural solution that addresses the limitations of primitive types while encapsulating domain-specific behavior. A value object represents an immutable type distinguished solely by its constituent properties, offering several architectural advantages:</p>
+<p><strong>Immutability</strong>: Once instantiated, the object&#39;s state remains constant, ensuring data consistency across application boundaries.</p>
+<p><strong>Encapsulated Validation</strong>: Domain-specific validation rules are colocated with the concept they govern, improving maintainability and reducing coupling.</p>
+<p><strong>Semantic Clarity</strong>: Type-safe abstractions provide explicit domain meaning, enhancing code readability and reducing ambiguity.</p>
+<p><strong>Behavioral Enrichment</strong>: Value objects can expose domain-specific operations, eliminating the need for external utility functions.</p>
+<p>The following implementation demonstrates the transformation of the ISBN field into a proper value object:</p>
+<pre><code class="language-java">public record ISBN(String value) {
+
+    private static final String ISBN_PATTERN = &quot;^(ISBN(-13)?:\\s?)?(\\d{3}-?\\d{1,5}-?\\d{1,7}-?\\d{1,7}-?\\d{1,7}|\\d{10}|\\d{13})$&quot;;
+
+    public ISBN {
+        Objects.requireNonNull(value);
+        if (!isValidISBN(value)) {
+            throw new IllegalArgumentException(&quot;ISBN is not valid&quot;);
+        }
+    }
+
+    private static boolean isValidISBN(String isbn) {
+        return Pattern.matches(ISBN_PATTERN, isbn);
+    }
+}
+</code></pre>
+<p>Subsequently, the Book record is modified to utilize the ISBN value object rather than a primitive string:</p>
+<pre><code class="language-java">public record Book(ISBN isbn, String name, String description, String authorName, String bookCover) {
+    private static final Pattern IMAGE_EXTENSION_PATTERN = Pattern.compile(&quot;\\.(jpg|png)$&quot;, Pattern.CASE_INSENSITIVE);
+
+    Book {
+        Objects.requireNonNull(isbn);
+
+        Objects.requireNonNull(name);
+        if (!nameIsValid(name)) {
+            throw new IllegalArgumentException(&quot;name is not valid&quot;);
+        }
+
+        Objects.requireNonNull(description);
+        if (!descriptionIsValid(description)) {
+            throw new IllegalArgumentException(&quot;description is not valid&quot;);
+        }
+
+        Objects.requireNonNull(authorName);
+        if (!authorNameIsValid(authorName)) {
+            throw new IllegalArgumentException(&quot;authorName is not valid&quot;);
+        }
+
+        Objects.requireNonNull(bookCover);
+        if (!bookCoverIsValid(bookCover)) {
+            throw new IllegalArgumentException(&quot;bookCover is not valid&quot;);
+        }
+    }
+
+    private static boolean nameIsValid(String name) {
+        return name.length() &gt; 0 &amp;&amp; name.length() &lt;= 80 &amp;&amp; !name.trim().equals(&quot;&quot;);
+    }
+
+    private static boolean descriptionIsValid(String description) {
+        return description.length() &gt; 0 &amp;&amp; description.length() &lt;= 200 &amp;&amp; !description.trim().equals(&quot;&quot;);
+    }
+
+    private static boolean authorNameIsValid(String authorName) {
+        return authorName.length() &gt; 0 &amp;&amp; !authorName.trim().equals(&quot;&quot;);
+    }
+
+    private static boolean bookCoverIsValid(String imageUrl) {
+        try {
+            URL url = new URL(imageUrl);
+            String path = url.getPath();
+            return IMAGE_EXTENSION_PATTERN.matcher(path).find();
+        } catch (MalformedURLException e) {
+            return false;
+        }
+    }
+
+}
+</code></pre>
+<p>This refactoring achieves several architectural improvements: the cognitive complexity of the Book class is significantly reduced, maintainability is enhanced through clear separation of concerns, and the responsibility for ISBN validation is appropriately delegated to the domain concept itself.</p>
+<p>The implementation requires a minor adjustment in object instantiation, as the ISBN value object must be explicitly created:</p>
+<pre><code class="language-java">class BookTest {
+
+    @Test
+    void createBook() {
+        final Book elQuixote = new Book(new ISBN(&quot;978-84-08-06105-2&quot;), &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;);
+
+        assertNotNull(elQuixote);
+    }
+
+    @Test
+    void cannotCreateBookWithWrongISBN() {
+        assertThrows(IllegalArgumentException.class, () -&gt; new Book(new ISBN(&quot;coolISBN&quot;), &quot;Don Quixote de la Mancha&quot;,
+                &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615.&quot;,
+                &quot;Miguel de Cervantes&quot;,
+                &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote.jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+    }
+}
+</code></pre>
+<p>The previously demonstrated service method that extracted country codes from ISBN strings can be significantly improved through value object encapsulation. By relocating the extraction logic to the ISBN class itself, we achieve better cohesion and eliminate external dependencies on internal string manipulation:</p>
+<pre><code class="language-java">public record ISBN(String value) {
+
+    private static final String ISBN_PATTERN = &quot;^(ISBN(-13)?:\\s?)?(\\d{3}-?\\d{1,5}-?\\d{1,7}-?\\d{1,7}-?\\d{1,7}|\\d{10}|\\d{13})$&quot;;
+
+    public ISBN {
+        Objects.requireNonNull(value);
+        if (!isValidISBN(value)) {
+            throw new IllegalArgumentException(&quot;ISBN is not valid&quot;);
+        }
+    }
+
+    private static boolean isValidISBN(String isbn) {
+        return Pattern.matches(ISBN_PATTERN, isbn);
+    }
+
+    public String countryCode() {
+        return value.replaceAll(&quot;-&quot;, &quot;&quot;).replace(&quot;ISBN-13:&quot;, &quot;&quot;).replace(&quot;ISBN:&quot;, &quot;&quot;).trim().substring(3, 5);
+    }
+
+}
+</code></pre>
+<p>This approach demonstrates significant architectural improvement through knowledge encapsulation. The domain-specific logic is transferred from external services to the appropriate value object, enhancing readability while providing a clean interface for accessing derived information.</p>
+<p>The refactored service method exhibits improved clarity and reduced complexity:</p>
+<pre><code class="language-java">class MyFantasticBookService {
+
+    private final List&lt;Book&gt; collectionOfBooks = populateCollectionOfBooksFromPersistence();
+
+    public List&lt;Book&gt; getAllBooksWithCountryCodeFromSpain() {
+        // That 84 looks like a code smell indeed
+        return collectionOfBooks.stream().filter(book -&gt; book.isbn().countryCode().equals(&quot;84&quot;)).toList();
+    }
+}
+</code></pre>
+<p>The transformation from primitive strings to semantic types enables the addition of domain-specific methods such as EAN prefix extraction, publisher code identification, and control digit validation. The extensibility of this approach allows for future enhancements based on evolving business requirements.</p>
+<p>Applying the same principles to all domain concepts results in a fully encapsulated Book entity:</p>
+<pre><code class="language-java">import java.util.Objects;
+
+public record Book(ISBN isbn, BookName name, BookDescription description, AuthorName authorName, BookCover bookCover) {
+
+    public Book {
+        Objects.requireNonNull(isbn);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(description);
+        Objects.requireNonNull(authorName);
+        Objects.requireNonNull(bookCover);
+    }
+}
+</code></pre>
+<p>The implementation of remaining value objects follows the established pattern, with each encapsulating its respective validation logic and domain behavior:</p>
+<pre><code class="language-java">public record BookName(String value) {
+    public BookName {
+        Objects.requireNonNull(value);
+        if (!nameIsValid(value)) {
+            throw new IllegalArgumentException(&quot;Name is not valid&quot;);
+        }
+    }
+
+    private static boolean nameIsValid(String name) {
+        return name.length() &gt; 0 &amp;&amp; name.length() &lt;= 80 &amp;&amp; !name.trim().equals(&quot;&quot;);
+    }
+}
+
+public record Description(String value) {
+    public Description {
+        Objects.requireNonNull(value);
+        if (!descriptionIsValid(value)) {
+            throw new IllegalArgumentException(&quot;Description is not valid&quot;);
+        }
+    }
+
+    private static boolean descriptionIsValid(String description) {
+        return description.length() &gt; 0 &amp;&amp; description.length() &lt;= 200 &amp;&amp; !description.trim().equals(&quot;&quot;);
+    }
+}
+
+public record AuthorName(String value) {
+    public AuthorName {
+        Objects.requireNonNull(value);
+        if (!authorNameIsValid(value)) {
+            throw new IllegalArgumentException(&quot;Author name is not valid&quot;);
+        }
+    }
+
+    private static boolean authorNameIsValid(String authorName) {
+        return authorName.length() &gt; 0 &amp;&amp; !authorName.trim().equals(&quot;&quot;);
+    }
+}
+
+public record BookCover(String value) {
+    private static final Pattern IMAGE_EXTENSION_PATTERN = Pattern.compile(&quot;\\.(jpg|png)$&quot;, Pattern.CASE_INSENSITIVE);
+
+    public BookCover {
+        Objects.requireNonNull(value);
+        if (!bookCoverIsValid(value)) {
+            throw new IllegalArgumentException(&quot;Book cover is not valid&quot;);
+        }
+    }
+
+    private static boolean bookCoverIsValid(String imageUrl) {
+        try {
+            URL url = new URL(imageUrl);
+            String path = url.getPath();
+            return IMAGE_EXTENSION_PATTERN.matcher(path).find();
+        } catch (MalformedURLException e) {
+            return false;
+        }
+    }
+}
+</code></pre>
+<p>The final implementation demonstrates a comprehensive approach to domain modeling where business requirements are directly encoded within the type system:</p>
+<pre><code class="language-java">class BookTest {
+
+    @Test
+    void createBook() {
+        final Book elQuixote = new Book(new ISBN(&quot;978-84-08-06105-2&quot;),
+                new BookName(&quot;Don Quixote de la Mancha&quot;),
+                new BookDescription(
+                        &quot;Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts,in 1605 and 1615.&quot;),
+                new AuthorName(&quot;Miguel de Cervantes&quot;),
+                new BookCover(
+                        &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Title_page_first_edition_Don_Quijote. jpg/800px-Title_page_first_edition_Don_Quijote.jpg&quot;));
+
+        assertNotNull(elQuixote);
+    }
+}
+</code></pre>
+<h2>Conclusion</h2>
+<p>This article has demonstrated the evolutionary progression from primitive string-based data structures to sophisticated domain-driven value objects. The initial approach, while functional, suffered from several architectural deficiencies: lack of semantic meaning, centralized validation logic, and poor encapsulation of domain behavior.</p>
+<p>Through the systematic application of value object patterns, we achieved significant improvements in code quality and maintainability. Each domain concept now encapsulates its validation rules and behavioral operations, creating a self-contained and semantically rich model. The resulting architecture ensures that business requirements are directly embedded within the code structure, reducing the likelihood of inconsistencies between domain specifications and implementation.</p>
+<p>The value object approach provides several key benefits: enhanced type safety through elimination of primitive obsession, improved code readability through semantic typing, better maintainability through encapsulated validation logic, and increased extensibility through domain-specific method exposure. Most importantly, this pattern ensures that once an object is successfully instantiated, it is guaranteed to satisfy all business requirements, providing strong compile-time guarantees about data integrity.</p>
+<hr>
+<p><em>This article was developed using generative AI under human supervision and guidance. The ideas, structure, and experiences shared reflect real-world development challenges, enhanced through AI-assisted writing to ensure clarity and comprehensiveness.</em></p>
+
+                    </article>
+
+                    <footer class="post-footer border-top pt-4">
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+                            <a href="/blog/" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-left me-2"></i>
+                            Back to blog
+                        </a>
+
+                            <div class="d-flex flex-wrap align-items-center gap-2">
+                                <span class="text-muted me-2">Share:</span>
+                                <a href="https://twitter.com/intent/tweet?text=Keep%20your%20requirements%20close%20to%20the%20code&url=https://mariocalin.github.io/blog/keep-requirements-close-to-code/" 
+                               class="btn btn-outline-info btn-sm" target="_blank" rel="noopener">
+                                    <i class="fab fa-twitter me-1"></i>
+                                Twitter
+                            </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mariocalin.github.io/blog/keep-requirements-close-to-code/" 
+                               class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                                    <i class="fab fa-linkedin me-1"></i>
+                                LinkedIn
+                            </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!-- Footer -->
+        <footer class="bg-primary text-white py-4 mt-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">© 2024 Mario Calín. Hecho con <i class="fas fa-heart text-danger"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Highlight.js JavaScript for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+    </body>
+</html>

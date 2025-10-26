@@ -1,587 +1,261 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+Home - Mario Calín Sánchez
+        </title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="/styles/styles.css?v=1761497151506">
+        <meta name="description" content="Personal web development portfolio">
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Mario - Professional page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="content-language" content="en" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    html {
-      font-family: 'Roboto', sans-serif;
-    }
-  </style>
-</head>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-lg">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="/">My Portfolio</a>
 
-<body class="w3-light-gray">
-  <div class="w3-content w3-margin-top" style="max-width: 1400px">
-    <!-- The Grid -->
-    <div class="w3-row-padding">
-      <!-- Left Column -->
-      <div class="w3-third">
-        <div class="w3-white w3-text-grey w3-card-4">
-          <div class="w3-display-container">
-            <img src="assets/img/profile.png" style="width: 100%" alt="Profile picture" />
-          </div>
-          <div class="w3-container">
-            <h2 class="w3-text-grey">Mario</h2>
-            <p>
-              <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>Software developer
-            </p>
-            <p>
-              <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>Murcia, Spain (remote)
-            </p>
-            <p>
-              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>
-              <a href="mailto:mariocalmsc@protonmail.com">mariocalmsc@protonmail.com</a>
-            </p>
-            <p>
-              <i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>
-              <a href="https://github.com/mariocalin">mariocalin</a>
-            </p>
-            <p>
-              <i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>
-              <a href="https://www.linkedin.com/in/mario-cal%C3%ADn-s%C3%A1nchez/">Linkedin profile</a>
-            </p>
-            <hr />
+                <!-- Current page indicator for mobile -->
+                <span class="navbar-text d-lg-none text-white-50 me-3 small">
+                        <i class="fas fa-home me-1"></i>Home
+                </span>
 
-            <!-- INTERESES -->
-            <p class="w3-large">
-              <b>
-                <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue-gray"></i>Interests</b>
-            </p>
-            <p>Web technologies</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                Microservices / Enterprise Applications
-              </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium " href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium " href="/curriculum">Resume</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <p>Cross-platform development</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                Hybrid / Mobile / Desktop
-              </div>
+        </nav>
+
+    <main class="home">
+        <!-- Hero Section -->
+        <section class="hero py-5" style="background: linear-gradient(135deg, #e3f2fd 0%, #f8fafc 50%, #e3f2fd 100%);">
+            <div class="container">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+                        <h1 class="display-4 fw-bold mb-3 text-dark">Hi, I'm <span class="text-primary">Mario Calín Sánchez</span></h1>
+                        <h2 class="fs-3 text-secondary mb-3">Backend Engineer &amp; Fullstack Developer</h2>
+                        <p class="lead text-muted">Backend engineer passionate about building <strong>robust, scalable systems</strong> using <em>Java</em>, <em>Golang</em>, and <em>TypeScript</em>. I focus on <strong>clean architecture</strong>, comprehensive testing, and applying <em>Domain-Driven Design</em> principles. Experienced in <strong>event-driven architectures</strong> and microservices. Additionally skilled in fullstack development with <em>Angular</em> and modern web technologies, with a strong foundation in <strong>best practices</strong> that ensure maintainable and reliable software solutions.</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-5 text-center">
+                        <img src="/assets/profile.jpg" alt="Mario Calín Sánchez" class="img-fluid rounded-circle shadow-lg" style="width: 200px; height: 200px; object-fit: cover;">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-auto">
+                        <div class="d-flex gap-3 flex-wrap justify-content-center">
+                            <a href="https://github.com/mariocalin" target="_blank" title="GitHub" class="btn btn-outline-primary d-flex align-items-center gap-2 text-decoration-none">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mario-calin-sanchez/" target="_blank" title="LinkedIn" class="btn btn-outline-primary d-flex align-items-center gap-2 text-decoration-none">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:mariocalmsc@protonmail.com" title="Email" class="btn btn-outline-primary d-flex align-items-center gap-2 text-decoration-none">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 11.64 21.615 3.82h.749c.904 0 1.636.733 1.636 1.637z"/>
+                                </svg>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>Software and development process quality</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                DevOps / Continuous Integration / Agile development
-              </div>
+        </section>
+        <!-- Portfolio Introduction -->
+        <section class="portfolio-intro bg-light py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8 text-center">
+                        <h2 class="display-5 fw-bold text-dark mb-4">Welcome to My Digital Space</h2>
+                        <p class="lead text-muted mb-5">
+                            This portfolio is more than just a showcase—it's a comprehensive view into my journey as a software engineer. 
+                            Here you'll discover my <strong>technical projects</strong>, dive into my <strong>thoughts and insights</strong> 
+                            through blog posts, and explore my <strong>professional background</strong> and skills.
+                        </p>
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100 text-center">
+                                    <div class="card-body p-4">
+                                        <div class="feature-icon fs-1 mb-3">💼</div>
+                                        <h3 class="h4 fw-bold text-primary mb-3">Projects</h3>
+                                        <p class="text-muted mb-0">Curated selection of my best technical work and creative solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100 text-center">
+                                    <div class="card-body p-4">
+                                        <div class="feature-icon fs-1 mb-3">📝</div>
+                                        <h3 class="h4 fw-bold text-primary mb-3">Blog</h3>
+                                        <p class="text-muted mb-0">Technical insights, learning experiences, and industry perspectives</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100 text-center">
+                                    <div class="card-body p-4">
+                                        <div class="feature-icon fs-1 mb-3">🎯</div>
+                                        <h3 class="h4 fw-bold text-primary mb-3">Resume</h3>
+                                        <p class="text-muted mb-0">Professional experience, skills, and educational background</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <p class="lead">
+                                Feel free to explore and don't hesitate to <a href="mailto:mariocalmsc@protonmail.com" class="text-primary text-decoration-none fw-semibold">get in touch</a> 
+                                if you'd like to collaborate or just have a conversation about technology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- INTERESES -->
-            <hr />
+        </section>
 
-            <!-- PRINCIPIOS -->
-            <p class="w3-large">
-              <b>
-                <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue-gray"></i>Values</b>
-            </p>
-            <p>Open Source</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                Linux / MIT / GNU
-              </div>
+        <!-- Featured Projects -->
+        <section class="featured-projects py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center mb-5">
+                        <h2 class="display-5 fw-bold text-dark mb-4">Featured Projects</h2>
+                        <p class="lead text-muted mb-3">
+                                    A thoughtful selection of projects that demonstrate my approach to software development 
+                                    and technical problem-solving. Includes both collaborative work in professional environments 
+                                    and personal initiatives that reflect my <em>curiosity</em> and <em>dedication</em> to the craft.
+                                </p>
+                        <p class="text-primary fw-semibold">
+                                    Each project represents a learning journey, an exploration of modern technologies, 
+                                    and a commitment to <strong>quality</strong> and <strong>elegance</strong> in code.
+                                </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                        <div class="col-lg-6 col-xl-4">
+                            <article class="card h-100 shadow-sm border-0">
+                                <img src="/assets/projects/indie.jpg" class="card-img-top" alt="INDIe" style="height: 200px; object-fit: cover;">
+
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h4 fw-bold text-dark">INDIe</h3>
+                                        <p class="text-primary fw-semibold small mb-2">Full Stack Developer</p>
+                                    <p class="card-text text-muted flex-grow-1">An innovative authoring tool that facilitates the creation of accessible digital resources for learning. Led by UPCT, this platform enables educators to develop inclusive educational content and has been nominated for the VII Discapnet Awards for Accessible Technologies. Over 400 open educational resources are available in the INDIeOpen repository, with more than 61,000 visits since 2021.</p>
+
+                                    <div class="mb-3">
+                                            <span class="badge bg-secondary me-2 mb-1">Java</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Springboot</span>
+                                            <span class="badge bg-secondary me-2 mb-1">MongoDB</span>
+                                            <span class="badge bg-secondary me-2 mb-1">MySQL</span>
+                                            <span class="badge bg-secondary me-2 mb-1">NodeJS</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Angular</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Azure</span>
+                                    </div>
+
+                                        <div class="d-flex gap-2 flex-wrap mt-auto">
+                                                <a href="https://portalinvestigacion.upct.es/proyectos/550477/detalle" target="_blank" class="btn btn-outline-primary btn-sm">Project description</a>
+                                                <a href="https://indieopen.upct.es/explore#title" target="_blank" class="btn btn-outline-primary btn-sm">Project website</a>
+                                                <a href="https://github.com/cpcdupct?tab=repositories" target="_blank" class="btn btn-outline-primary btn-sm">Public code</a>
+                                        </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6 col-xl-4">
+                            <article class="card h-100 shadow-sm border-0">
+                                <img src="/assets/projects/banking-challenge.jpg" class="card-img-top" alt="Banking Transactions Challenge" style="height: 200px; object-fit: cover;">
+
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h4 fw-bold text-dark">Banking Transactions Challenge</h3>
+                                        <p class="text-primary fw-semibold small mb-2">Backend Developer</p>
+                                    <p class="card-text text-muted flex-grow-1">Technical challenge for a banking sector client focused on transaction management and financial operations. Implements domain-driven design, comprehensive unit testing, and integration testing following industry best practices. Demonstrates clean architecture, SOLID principles, robust financial data handling, and secure transaction processing patterns.</p>
+
+                                    <div class="mb-3">
+                                            <span class="badge bg-secondary me-2 mb-1">Java</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Spring Boot</span>
+                                            <span class="badge bg-secondary me-2 mb-1">JUnit</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Mockito</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Maven</span>
+                                            <span class="badge bg-secondary me-2 mb-1">OpenAPI</span>
+                                            <span class="badge bg-secondary me-2 mb-1">H2 Database</span>
+                                    </div>
+
+                                        <div class="d-flex gap-2 flex-wrap mt-auto">
+                                                <a href="https://github.com/mariocalin/challenge" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+                                        </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6 col-xl-4">
+                            <article class="card h-100 shadow-sm border-0">
+                                <img src="/assets/projects/portfolio.png" class="card-img-top" alt="Personal Portfolio &amp; Resume" style="height: 200px; object-fit: cover;">
+
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h4 fw-bold text-dark">Personal Portfolio &amp; Resume</h3>
+                                        <p class="text-primary fw-semibold small mb-2">Full Stack Developer (AI-Guided Development)</p>
+                                    <p class="card-text text-muted flex-grow-1">Modern, responsive portfolio website. This project showcases AI-guided development practices, combining human expertise with AI assistance to create a professional web presence. Features include automated content management, interactive design elements, and optimized user experience for both desktop and mobile devices.</p>
+
+                                    <div class="mb-3">
+                                            <span class="badge bg-secondary me-2 mb-1">Node.js</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Nunjucks</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Bootstrap 5</span>
+                                            <span class="badge bg-secondary me-2 mb-1">JavaScript</span>
+                                            <span class="badge bg-secondary me-2 mb-1">CSS3</span>
+                                            <span class="badge bg-secondary me-2 mb-1">JSON</span>
+                                            <span class="badge bg-secondary me-2 mb-1">Markdown</span>
+                                            <span class="badge bg-secondary me-2 mb-1">AI Tools</span>
+                                    </div>
+
+                                        <div class="d-flex gap-2 flex-wrap mt-auto">
+                                                <a href="https://github.com/mariocalin/portfolio" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repository</a>
+                                                <a href="https://mariocalin.github.io" target="_blank" class="btn btn-outline-primary btn-sm">Live Website</a>
+                                        </div>
+                                </div>
+                            </article>
+                        </div>
+                </div>
             </div>
-            <p>Teamwork</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                Collaborative environment / CICD
-              </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+        <footer class="bg-primary text-white py-4 mt-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">© 2024 Mario Calín. Hecho con <i class="fas fa-heart text-danger"></i>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <p>Iterative and agile methods</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                Scrum / Iterative-incremental
-              </div>
-            </div>
-            <!-- PRINCIPIOS -->
-            <hr />
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-            <!-- LENGUAJES -->
-            <p class="w3-large">
-              <b>
-                <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue-gray"></i>Programming languages</b>
-            </p>
-            <p>Java</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                Most prefered
-              </div>
-            </div>
-            <p>Typescript</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 75%">
-                Prefered
-              </div>
-            </div>
-            <p>C#</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 50%">
-                Certain experience
-              </div>
-            </div>
-            <!-- LENGUAJES -->
-            <hr />
-
-            <!-- IDIOMAS -->
-            <p class="w3-large w3-text-theme">
-              <b>
-                <i class="fa fa-globe fa-fw w3-margin-right w3-text-blue-gray"></i>Languages</b>
-            </p>
-            <p>Spanish</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 100%">
-                First language
-              </div>
-            </div>
-            <p>English</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width: 50%">
-                Upper intermediate
-              </div>
-            </div>
-            <!-- IDIOMAS -->
-            <br />
-          </div>
-        </div>
-        <br />
-
-        <!-- End Left Column -->
-      </div>
-
-      <!-- Right Column -->
-      <div class="w3-twothird">
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h1 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Professional experience
-          </h1>
-
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Software engineer / Autentia Real Business Solutions
-              </b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>April 2022
-              - <span class="w3-tag w3-blue-gray w3-round">Current</span>
-            </h3>
-            <p>I am a member of the development team for the Inditex branch.</p>
-          </div>
-
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Software engineer / Bidea Avant SL
-              </b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>September 2021
-              - March 2022
-            </h3>
-            <p>I was a member of the development team of different software solutoins provided by the company. The stack
-              used to develop the tools is based on NodeJS technologies (Typescript and Javascript):</p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>NodeJS stack</strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Web applications using express JS 4</li>
-                  <li>Angualr 12 and AngularJS</li>
-                  <li>Testig using jasmine</li>
-                </ul>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>CI/CD tools </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Gitlab: GIT, pipelines, boards</li>
-                  <li>Docker</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Databases </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>SQL Server</li>
-                  <li>MongoDB</li>
-                  <li>Redis</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Software engineer / Digital Content Production Center (CPCD),
-                University of Cartagena
-              </b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>December 2018
-              - September 2021
-            </h3>
-            <p>
-              During my time at UPCT, I was part of the Erasums+ Project called
-              <a href="http://indie.upct.es">INDIeProject</a>. I worked as a
-              software architect designing and implementing tools that are
-              required by the project needs.
-            </p>
-            <p>
-              I was part of the development team of the following open-source
-              software solutions:
-            </p>
-            <ul>
-              <li>
-                <strong>INDIe Editor:</strong> An authoring tool for transform
-                teachers into authors of e-learning content.
-              </li>
-              <li>
-                <strong>INDIe Open:</strong> An accesible web repository of content units
-                created by the INDIeAuthor tool.
-              </li>
-            </ul>
-
-            <p>
-              I used the following technologies to develop the software
-              tools:
-            </p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>INDIe Editor </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Javascript + SCSS + HTML5 + Gulp</li>
-                  <li>Typescript 4.2 with NodeJS, Express JS 4 and Overnight JS</li>
-                  <li>Open source project: <a href="https://github.com/cpcdupct/INDIeAuthor">INDIeAuthor</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>INDIeOpen </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Databases: MySQL8 and MongoDB 4</li>
-                  <li>Backend technologies: Spring Boot 2.3.5 + Spring Cloud</li>
-                  <li>Frontend technologies: Angular 12 + Bootstrap 4</li>
-                  <li>
-                    Development methodologies: Test-driven development,
-                    iterative-incremental
-                  </li>
-                  <li>
-                    Azure DevOps: Git, Azure pipelines
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <p>
-              In addition to the INDIe tools, I was part of the development team
-              of the
-              <a href="http://ivideo.upct.es/" target="_blank">iaVideo</a> tool,
-              which allows developers to create and play interactive videos
-              inside a webpage.
-            </p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>iaVideo</strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>HTML5 + SCSS + Javascript</li>
-                  <li>Javascript library</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Research and development / Computer Science Faculty, University
-                of Murcia</b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>October 2017 -
-              November 2018
-            </h3>
-            <p>
-              During my time at Universidad de Murcia, I worked as member of the
-              research and development staff of Green in Software Systems and
-              Engineering (GINSENG) project, where two publications were made:
-            </p>
-
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Research publications</strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>
-                    <a href="https://doi.org/10.26599/TST.2019.9010003" target="_blank">Software vulnerabilities
-                      overview: A descriptive
-                      study.</a>
-                    At Tsinghua Science and Technology (Volume:25, Issue:2,
-                    April 2020)
-                  </li>
-                  <li>
-                    <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=6902121" target="_blank">Contenidos
-                      para la competencia de sostenibilidad en un
-                      currículo de Ingeniería del Software.</a>
-                    At "Innovación, diversidad y TIC en la enseñanza superior",
-                    ISBN 978-84-09-05866-2, pages. 389-400
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <p>
-              In addition to a research role, I developed software tools and
-              applications to meet the project needs using the following
-              software technologies:
-            </p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>J2EE applications </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>JSF2 + JPA 2.1</li>
-                  <li>Integration with LimeSurvey API</li>
-                  <li>Java Jax-RS 1.19 RESTful API</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>PHP web applications </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>PHP 5.6 + Symfony 3.4</li>
-                </ul>
-              </li>
-            </ul>
-
-            <p>
-              In collaboration with the group, I work as a main developer for
-              the mobile app called Apperro, which is based on my degree final
-              project.
-            </p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Apperro&trade; mobile app </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Ionic Framework 3</li>
-                  <li>Java Jax-RS 1.19 + JPA 2.1</li>
-                  <li>Google Maps Integration</li>
-                  <li>Firebase Cloud Messaging</li>
-                </ul>
-              </li>
-            </ul>
-            <hr />
-          </div>
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Software developer /
-                <a href="https://smartwaystudio.com/"> Smartway Studio S.L</a>
-              </b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2015 -
-              July 2017
-            </h3>
-            <p>
-              During my time at Smartway Studio I worked as a software analyst
-              and developer in web applications projects and mobile web
-              applications. As a software engineer I used different technologies
-              and played different roles:
-            </p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Web Applications developer (full-stack developer)
-                  </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>.NET MVC Framework + EF6</li>
-                  <li>Java J2EE + JPA 2.1 + AngularJS</li>
-                  <li>AngularJS + Sails JS</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Cross-platform mobile app developer </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Ionic Framework (v1, v2)</li>
-                  <li>Appcelerator</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>REST WebServices </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Jersey Jax-RS (1.19)</li>
-                  <li>.NET Web API</li>
-                  <li>WCF Services</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>CMS Manager </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Wordpress</li>
-                  <li>Woocommerce</li>
-                  <li>Prestashop</li>
-                </ul>
-              </li>
-            </ul>
-
-            <hr />
-          </div>
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Trainee /
-                <a href="http://www.soprasteria.es/"> Steria Group</a>
-              </b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2014
-              - April 2014
-            </h3>
-            <p>
-              During my time as a trainee at Steria Group I participated in the
-              development of a web portal using Liferay Inc platform. I
-              completed web styling tasks, business logic implementation tasks
-              and social media integration tasks.
-            </p>
-            <br />
-          </div>
-        </div>
-
-        <div class="w3-container w3-card w3-white">
-          <h1 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-university fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Academic formation
-          </h1>
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <strong> University Expert in Devops & Cloud</strong>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>2021
-              <i class="fa fa-graduation-cap fa-fw w3-margin-left w3-margin-right"></i>Unfinished
-              <i class="fa fa-university fa-fw w3-margin-right w3-margin-left"></i>International University of La Rioja
-            </h3>
-
-            <h2 class="w3-opacity">
-              <strong>Master in New Technologies in Computer Science (Software
-                mention)</strong>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2018
-              <i class="fa fa-graduation-cap fa-fw w3-margin-left w3-margin-right"></i>9.78
-              <i class="fa fa-university fa-fw w3-margin-right w3-margin-left"></i>Computer Science Faculty, University
-              of Murcia
-            </h3>
-
-            <p>Master in Software Technologies.</p>
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Highlighted marks </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Current Trends in Web - 10 HM</li>
-                  <li>Model Driven Software Development - 9.9</li>
-                  <li>Software Quality - 10 HM</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Master Thesis </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>
-                    Definition of an agile method of reuse requirements based on
-                    SIREN - 9.9
-                  </li>
-                  <li>
-                    Web Tool to support the agile method using Pippo Web
-                    Framework + JPA 2.1 + JTwig
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <hr />
-          </div>
-          <div class="w3-container">
-            <h2 class="w3-opacity">
-              <b>Computer Science Degree </b>
-            </h2>
-            <h3 class="w3-text-blue-gray">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2016
-              <i class="fa fa-graduation-cap fa-fw w3-margin-left w3-margin-right"></i>7.4
-              <i class="fa fa-university fa-fw w3-margin-right w3-margin-left"></i>Computer Science Faculty, University
-              of Murcia
-            </h3>
-            <p>
-              Graduated in Computer Science Degree at Software Engineering
-              mention.
-            </p>
-
-            <ul class="w3-ul w3-border">
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Highlighted marks </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>Software Architecture - 10 HM</li>
-                  <li>Web Applications Development - 9.2 HM</li>
-                  <li>Technologies For Software Development- 8</li>
-                </ul>
-              </li>
-              <li>
-                <span class="w3-text-blue-gray">
-                  <strong>Degree Final Project </strong>
-                </span>
-                <ul class="w3-ul">
-                  <li>
-                    Cross-platform mobile application for pet daily care - 9.5
-                  </li>
-                  <li>
-                    <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=6275486">Scientific Article at Revista
-                      Consulta de Difusión
-                      Veterinaria, Spain, ISSN 1135-0598, Nº239 pp.43-48, April
-                      2017.</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <br />
-          </div>
-        </div>
-
-        <!-- End Right Column -->
-      </div>
-
-      <!-- End Grid -->
-    </div>
-
-    <!-- End Page Container -->
-  </div>
-  <footer class="w3-container w3-blue-gray w3-center w3-margin-top">
-    <p>Developed by Mario using W3CSS - 2018</p>
-  </footer>
-</body>
+    </body>
+</html>
