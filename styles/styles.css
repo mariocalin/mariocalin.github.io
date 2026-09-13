@@ -57,7 +57,7 @@ main {
 }
 
 /* Custom Badge Spacing */
-.badge + .badge {
+.badge+.badge {
   margin-left: 0.25rem;
 }
 
@@ -67,9 +67,17 @@ main {
 }
 
 @keyframes pulse {
-  0% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.4; }
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
 }
 
 /* =================================
@@ -115,8 +123,13 @@ main {
 }
 
 @keyframes progressAnimation {
-  0% { width: 0% !important; }
-  100% { width: var(--progress-width); }
+  0% {
+    width: 0% !important;
+  }
+
+  100% {
+    width: var(--progress-width);
+  }
 }
 
 /* Hover effects for CV cards */
@@ -159,6 +172,7 @@ main {
     transform: scale(0);
     opacity: 1;
   }
+
   100% {
     transform: scale(4);
     opacity: 0;
@@ -212,7 +226,7 @@ main {
   color: #374151;
 }
 
-.post-content > * + * {
+.post-content>*+* {
   margin-top: 1.5rem;
 }
 
@@ -247,7 +261,7 @@ main {
   text-align: justify;
 }
 
-.post-content ul, 
+.post-content ul,
 .post-content ol {
   margin-left: 1.5rem;
   margin-bottom: 1.25rem;
@@ -257,7 +271,7 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.post-content li > p {
+.post-content li>p {
   margin-bottom: 0.5rem;
 }
 
@@ -342,7 +356,7 @@ main {
   color: #4b5563;
 }
 
-.post-content blockquote > * {
+.post-content blockquote>* {
   margin: 0;
 }
 
@@ -388,6 +402,7 @@ main {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
   .timeline-item::before,
   .timeline-item::after {
     display: none;
@@ -449,7 +464,7 @@ main {
     border-left: none;
     border-right: none;
   }
-  
+
   .post-content pre code {
     font-size: 0.8rem;
   }
@@ -485,183 +500,6 @@ main {
 }
 
 /* =================================
-   THOUGHTS TIMELINE STYLES
-================================= */
-
-/* Thoughts page layout */
-.thoughts-page {
-  background-color: #f8fafc;
-}
-
-.thoughts-header {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-/* Timeline container */
-.timeline {
-  position: relative;
-}
-
-/* Thought cards */
-.thought-card {
-  transition: transform 0.2s ease-in-out;
-}
-
-.thought-card:hover {
-  transform: translateY(-2px);
-}
-
-.thought-card .card {
-  border-left: 4px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.thought-card:hover .card {
-  border-left-color: #0d6efd;
-  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15) !important;
-}
-
-/* Thought avatar */
-.thought-avatar {
-  flex-shrink: 0;
-}
-
-/* Thought content styling */
-.thought-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #2d3748;
-  margin-bottom: 0;
-}
-
-/* Multimedia grid layouts */
-.thought-multimedia img {
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.thought-multimedia img:hover {
-  transform: scale(1.02);
-}
-
-/* Single image layout */
-.thought-multimedia .single-image img {
-  max-height: 300px;
-  width: auto;
-  margin: 0 auto;
-}
-
-/* Multiple images layout */
-.thought-multimedia .row img {
-  height: 120px;
-  object-fit: cover;
-}
-
-@media (min-width: 768px) {
-  .thought-multimedia .row img {
-    height: 150px;
-  }
-}
-
-/* Thought actions */
-.thought-footer {
-  background-color: #f8fafc;
-  margin: -1rem -1rem -1rem -1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 0 0 0.375rem 0.375rem;
-}
-
-.thought-actions .btn {
-  font-size: 0.875rem;
-  padding: 0.375rem 0.75rem;
-}
-
-/* Share buttons */
-.thought-share .btn {
-  transition: all 0.2s ease;
-}
-
-.thought-share .btn:hover {
-  transform: translateY(-1px);
-}
-
-/* Thought detail page specific styles */
-.thought-detail-page .thought-card-detail .card {
-  border-left: 4px solid #0d6efd;
-}
-
-.thought-detail-page .thought-content p {
-  font-size: 1.25rem;
-  line-height: 1.7;
-}
-
-.thought-detail-page .thought-multimedia .single-image img {
-  max-height: 500px;
-}
-
-.thought-detail-page .thought-multimedia .row img {
-  height: 200px;
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 767.98px) {
-  .thought-card .card-body {
-    padding: 1rem;
-  }
-  
-  .thought-avatar {
-    display: none;
-  }
-  
-  .thought-content p {
-    font-size: 1rem;
-  }
-  
-  .thought-multimedia .row img {
-    height: 100px;
-  }
-  
-  .thought-detail-page .thought-multimedia .row img {
-    height: 150px;
-  }
-  
-  .thought-share {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .thought-share .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* Smooth animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.thought-card {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.thought-card:nth-child(2) { animation-delay: 0.1s; }
-.thought-card:nth-child(3) { animation-delay: 0.2s; }
-.thought-card:nth-child(4) { animation-delay: 0.3s; }
-
-/* Empty state styles */
-.thoughts-page .text-center i.fa-lightbulb {
-  opacity: 0.3;
-}
-
-/* =================================
    MOBILE NAVIGATION ENHANCEMENTS
 ================================= */
 
@@ -676,7 +514,7 @@ main {
   .navbar-brand {
     flex-grow: 1;
   }
-  
+
   .navbar-text.d-lg-none {
     font-size: 0.85rem;
     opacity: 0.9;

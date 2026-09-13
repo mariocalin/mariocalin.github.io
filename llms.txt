@@ -1,0 +1,20 @@
+# Mario Calín Sánchez
+
+> Backend Engineer & Fullstack Developer with 9+ years of experience building scalable
+> systems in Java, Golang, event-driven architectures, and microservices.
+
+This site is the personal portfolio, technical blog, and resume of Mario Calín Sánchez.
+
+## Key pages
+
+- [Resume/CV](https://mariocalin.github.io/curriculum/): Full professional experience,
+  education, publications, and skills. Also available as machine-readable schema.org
+  Person JSON-LD embedded in the page.
+- [Blog](https://mariocalin.github.io/blog/): Technical articles on software engineering.
+- [Home](https://mariocalin.github.io/): Portfolio overview and featured projects.
+
+## Contact
+
+- Email: mariocalmsc@protonmail.com
+- LinkedIn: https://www.linkedin.com/in/mario-calin-sanchez/
+- GitHub: https://github.com/mariocalin
